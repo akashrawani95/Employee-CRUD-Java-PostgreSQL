@@ -13,12 +13,12 @@ public class Employee_Service {
     public void insertEmployee(Employee emp) {
         try {
             Connection con = DriverManager.getConnection(URL, USER, PASS);
-            String sql = "INSERT INTO employee(id, name, age, emp_class) VALUES (?, ?, ?, ?)";
+            String sql = "INSERT INTO employee(id, name, age, salary) VALUES (?, ?, ?, ?)";
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, emp.getId());
             pstmt.setString(2, emp.getName());
             pstmt.setInt(3, emp.getAge());
-            pstmt.setString(4, emp.getEmpClass());  // Fix here
+            pstmt.setDouble(4, emp.getSalary());  // Use setDouble for salary
 
             int rowsInserted = pstmt.executeUpdate();
             if (rowsInserted > 0) {

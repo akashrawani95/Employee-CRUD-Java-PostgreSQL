@@ -27,10 +27,9 @@ public class Employee_Driver {
 
                 System.out.print("Enter Age: ");
                 emp.setAge(sc.nextInt());
-                sc.nextLine();
 
-                System.out.print("Enter Class: ");
-                emp.setEmpClass(sc.nextLine());
+                System.out.print("Enter Salary: ");
+                emp.setSalary(sc.nextDouble());
 
                 service.insertEmployee(emp);
                 break;

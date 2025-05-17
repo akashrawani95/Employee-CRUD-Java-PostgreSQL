@@ -4,7 +4,7 @@ public class Employee {
     private int id;
     private String name;
     private int age;
-    private String empClass;  
+    private double salary;  
 
     public int getId() {
         return id;
@@ -30,11 +30,11 @@ public class Employee {
         this.age = age;
     }
 
-    public String getEmpClass() {
-        return empClass;
+    public double getSalary() { 
+        return salary;
     }
 
-    public void setEmpClass(String empClass) {
-        this.empClass = empClass;
+    public void setSalary(double salary) { 
+        this.salary = salary;
     }
 }
